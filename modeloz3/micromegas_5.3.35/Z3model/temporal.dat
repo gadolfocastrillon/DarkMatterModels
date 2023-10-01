@@ -1,0 +1,18 @@
+
+Dark matter candidate is '~phi1' with spin=0/2 mass=3.18E+01
+
+==== Calculation of relic density =====
+Xf=1.48e+01 Omega=2.50e+02
+# Channels which contribute to 1/(omega) more than 1%.
+# Relative contributions in % are displayed
+   80% ~phi1 ~PHI1 ->b B 
+   12% ~phi1 ~PHI1 ->c C 
+    8% ~phi1 ~PHI1 ->l L 
+
+==== Calculation of CDM-nucleons amplitudes  =====
+~phi1[~PHI1]-nucleon micrOMEGAs amplitudes
+proton:  SI  9.095E-10 [9.095E-10]  SD  0.000E+00 [0.000E+00]
+neutron: SI  9.185E-10 [9.185E-10]  SD  0.000E+00 [0.000E+00]
+~phi1[~PHI1]-nucleon cross sections[pb]:
+ proton  SI 3.411E-10 [3.411E-10] SD 0.000E+00 [0.000E+00]
+ neutron SI 3.479E-10 [3.479E-10] SD 0.000E+00 [0.000E+00]

@@ -1,0 +1,8 @@
+# file to improve default parameters
+MH 125 #Masa del boson de higgs
+Ms2 900 #Masa del Scalar
+Mp1 400 #Masa del fermion
+laS 0.1 #Higgs portal coupling
+ys 0.5 #Dms Scalar Yukawa coupling
+yp 0.5 #Dms pseudoscalar Yukawa coupling
+

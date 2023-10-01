@@ -1,0 +1,23 @@
+# compiler Flags
+CC = gcc
+CFLAGS = -g -fsigned-char -std=gnu99 -fPIC
+HX11 = 
+LX11 = -lX11
+lDL = -rdynamic -ldl 
+SHARED = -shared
+SONAME = 
+SO = so
+SNUM = -DNUM_LONG_LONG
+
+FC = gfortran 
+FFLAGS = -fno-automatic
+RANLIB = ranlib
+lFort = -lgfortran
+lQuad = 
+CXX=g++    
+CXXFLAGS = -g -fPIC 
+CALCHEP = /home/gustavo/Escritorio/trabajo_de_grado/DarkMatterModels/modeloz2/micromegas_5.3.35/CalcHEP_src
+UNAME = Linux
+export CC CFLAGS  lDL LX11 SHARED SONAME SO FC FFLAGS RANLIB CXX CXXFLAGS lFort
+
+

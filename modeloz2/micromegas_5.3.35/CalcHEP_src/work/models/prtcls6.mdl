@@ -1,0 +1,38 @@
+MLRSM-1.1.5h
+ Particles
+ Full  name  |A          |A+         | number |2*spin| mass          |width          |color|aux|>LaTex(A)<|>LaTeX(A+)   <|
+Photon       |a          |a          |22      |2     |0              |0              |1    |G  |a         |a
+Z            |Z          |Z          |23      |2     |MZ             |!WZ            |1    |0  |Z         |Z
+W            |W+         |W-         |24      |2     |MW             |!WW            |1    |3  |W+        |W-
+G            |g          |g          |21      |2     |0              |0              |8    |G  |g         |g
+W2           |W2+        |W2-        |34      |2     |MW2            |!WW2           |1    |3  |W2+       |W2-
+Z2           |Z2         |Z2         |32      |2     |MZ2            |!WZ2           |1    |0  |Z2        |Z2
+Electron     |e-         |e+         |11      |1     |Me             |0              |1    |-3 |e-        |e+
+Muon         |mu-        |mu+        |13      |1     |Mmu            |0              |1    |-3 |mu-       |mu+
+Tau          |ta-        |ta+        |15      |1     |Mta            |0              |1    |-3 |ta-       |ta+
+u-quark      |u          |u~         |2       |1     |MU             |0              |3    |2  |u         |u~
+c-quark      |c          |c~         |4       |1     |MC             |0              |3    |2  |c         |c~
+t-quark      |t          |t~         |6       |1     |MT             |!WT            |3    |2  |t         |t~
+d-quark      |d          |d~         |1       |1     |MD             |0              |3    |-1 |d         |d~
+s-quark      |s          |s~         |3       |1     |MS             |0              |3    |-1 |s         |s~
+b-quark      |b          |b~         |5       |1     |MB             |0              |3    |-1 |b         |b~
+Light-electro|N1         |N1         |12      |1     |MN1            |0              |1    |0  |N1        |N1
+Light-Mu-neut|N2         |N2         |14      |1     |MN2            |0              |1    |0  |N2        |N2
+Light-tau-neu|N3         |N3         |16      |1     |MN3            |0              |1    |0  |N3        |N3
+Heavy-electro|N4         |N4         |9900012 |1     |MN4            |!WN4           |1    |0  |N4        |N4
+heavy-mu-neut|N5         |N5         |9900014 |1     |MN5            |!WN5           |1    |0  |N5        |N5
+Heavy-tau-neu|N6         |N6         |9900016 |1     |MN6            |!WN6           |1    |0  |N6        |N6
+Charged-fermi|~psi-      |~psi+      |2001    |1     |MpsiD          |0              |1    |-3 |~psi-     |~psi+
+LSP-DM       |~chi1      |~chi1      |2002    |1     |Mchi1          |0              |1    |0  |~chi1     |~chi1
+NLSP         |~chi2      |~chi2      |2003    |1     |Mchi2          |0              |1    |0  |~chi2     |~chi2
+Neutral-Higgs|H          |H          |25      |0     |MH             |!WH            |1    |0  |H         |H
+Neutral-Higgs|H01        |H01        |35      |0     |MH01           |!WH01          |1    |0  |H01       |H01
+Neutral-Higgs|H02        |H02        |43      |0     |MH02           |!WH02          |1    |0  |H02       |H02
+Neutral-Higgs|H03        |H03        |44      |0     |MH03           |!WH03          |1    |0  |H03       |H03
+Charged-Higgs|HP1        |HM1        |37      |0     |MHP1           |!WHP1          |1    |3  |HP1       |HM1
+Charged-Higgs|HP2        |HM2        |38      |0     |MHP2           |!WHP2          |1    |3  |HP2       |HM2
+Doubly-charge|HL++       |HL--       |61      |0     |MHPPL          |!WHPPL         |1    |6  |HL++      |HL--
+Doubly-charge|HR++       |HR--       |62      |0     |MHPPR          |!WHPPR         |1    |6  |HR++      |HR--
+Pseudo-Scalar|A01        |A01        |36      |0     |MA01           |!WA01          |1    |0  |A01       |A01
+Pseudo-Scalar|A02        |A02        |45      |0     |MA02           |!WA02          |1    |0  |A02       |A02
+==========================================================================================================================

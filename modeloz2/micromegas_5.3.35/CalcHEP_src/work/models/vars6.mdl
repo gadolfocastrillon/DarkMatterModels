@@ -1,0 +1,82 @@
+MLRSM-1.1.5h
+ Parameters
+  Name         | Value       |> Comment                                                                <|
+aEWM1          |127.9        |Inverse of the EW coupling constant at the Z pole
+Gf             |0.0000116637 |Fermi constant
+aS             |0.1184       |Strong coupling constant at the Z pole
+s12            |0.221        |CKMs12
+s23            |0.041        |CKMs23
+s13            |0.0035       |CKMs13
+sL12           |0            |sL12
+sL23           |0            |sL23
+sL13           |0            |sL13
+lambda1        |0.118        |Higgs potential lambda1
+lambda2        |0.2          |Higgs potential lambda2
+lambda3        |-0.234       |Higgs potential lambda3
+lambda4        |0            |Higgs potential lambda4
+rho1           |0.5          |Higgs potential rho1
+rho2           |0.05         |Higgs potential rho2
+rho3           |1.25         |Higgs potential rho3
+rho4           |0.125        |Higgs potential rho4
+alpha1         |0.5          |Higgs potential alpha1
+alpha2         |0.5          |Higgs potential alpha2
+alpha3         |0.5          |Higgs potential alpha3
+Wl11           |1            |Mixing parameter Wl11
+Wl22           |1            |Mixing parameter Wl22
+Wl33           |1            |Mixing parameter Wl33
+WU11           |1            |Mixing parameter WU11
+WU22           |1            |Mixing parameter WU22
+WU33           |1            |Mixing parameter WU33
+WD11           |1            |Mixing parameter WD11
+WD22           |1            |Mixing parameter WD22
+WD33           |1            |Mixing parameter WD33
+VKe            |0.00316227766|Lepton mixing parameter e
+VKmu           |0.00316227766|Lepton mixing parameter mu
+VKta           |0.00316227766|Lepton mixing parameter ta
+vev            |246.         |Higgs vacuum expectation value
+k1             |227.91       |bidoublet vacuum expectation 1
+vL             |0            |left triplet vacuum expectation
+sk2            |1            |the sign of k2
+RLratio        |1.           |Ratio of gR by gL
+MW2            |5000         |W2 mass
+MbareBD        |1000.        |Bare mass of fermion bi-doublet
+delta12        |0.1          |half the Mass gap between NLSP and LSP
+GG             |1.21977796370|Strong coupling constant at the Z pole   This value will be ignored and ca
+MZ             |91.1876      |Mass of Z.
+MW             |80.399       |Mass of W.
+Me             |0.000511     |Mass of e.
+Mmu            |0.10566      |Mass of mu.
+Mta            |1.777        |Mass of ta.
+MU             |0.00255      |Mass of u.
+MC             |1.27         |Mass of c.
+MT             |172          |Mass of t.
+MD             |0.00504      |Mass of d.
+MS             |0.101        |Mass of s.
+MB             |4.7          |Mass of b.
+MN1            |1.e-8        |Mass of N1.
+MN2            |1.e-8        |Mass of N2.
+MN3            |1.e-8        |Mass of N3.
+MN4            |100          |Mass of N4.
+MN5            |100          |Mass of N5.
+MN6            |100          |Mass of N6.
+%WZ            |2.4952       |Width of Z.
+%WW            |2.08         |Width of W.
+%WW2           |69           |Width of W2.
+%WZ2           |80           |Width of Z2.
+%WT            |1.50833649   |Width of t.
+%WN4           |1.5          |Width of N4.
+%WN5           |1.5          |Width of N5.
+%WN6           |1.5          |Width of N6.
+%WH            |0.0057       |Width of H.
+%WH01          |0.00575308848|Width of H01.
+%WH02          |0.00575308848|Width of H02.
+%WH03          |0.00575308848|Width of H03.
+%WHP1          |0.006        |Width of HP1.
+%WHP2          |0.006        |Width of HP2.
+%WHPPL         |0.007        |Width of HPPL.
+%WHPPR         |0.007        |Width of HPPR.
+%WA01          |0.006        |Width of A01.
+%WA02          |0.006        |Width of A02.
+E              |2.71828182845|The base of the natural logarithm.
+Pi             |3.14159265358|The circumference of a circle divided by the diameter.
+=========================================================================================================

@@ -1,0 +1,25 @@
+
+=== MASSES OF HIGGS AND ODD PARTICLES: ===
+Higgs masses and widths
+      h   120.00 2.04E+00
+
+Masses of odd sector Particles:
+~x1      : Mdm1    =   3.671 || 
+
+==== Calculation of relic density =====
+Xf=1.99e+01 Omega=3.52e-01
+# Channels which contribute to 1/(omega) more than 1%.
+# Relative contributions in % are displayed
+   48% ~x1 ~x1 ->c C 
+   43% ~x1 ~x1 ->l L 
+    7% ~x1 ~x1 ->G G 
+    2% ~x1 ~x1 ->s S 
+
+==== Calculation of CDM-nucleons amplitudes  =====
+~x1-nucleon micrOMEGAs amplitudes 
+proton:  SI  -8.446E-07  SD  0.000E+00
+neutron: SI  -8.530E-07  SD  0.000E+00
+
+~x1-nucleon cross sections[pb] ====
+ proton  SI 1.977E-04  SD 0.000E+00
+ neutron SI 2.017E-04  SD 0.000E+00
