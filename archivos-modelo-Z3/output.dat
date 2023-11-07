@@ -1,0 +1,68 @@
+
+Dark matter candidate is '~phi1' with spin=0/2 mass=3.00E+02
+
+=== MASSES OF HIGGS AND ODD PARTICLES: ===
+Higgs masses and widths
+      h   125.00 4.02E-03
+
+Masses of odd sector Particles:
+~phi1    : Mp1     = 300.000 || 
+
+==== Calculation of relic density =====
+Xf=2.63e+01 Omega=1.64e-02
+# Channels which contribute to 1/(omega) more than 1%.
+# Relative contributions in % are displayed
+   92% ~phi1 ~phi1 ->h ~PHI1 
+    3% ~phi1 ~PHI1 ->W+ W- 
+    2% ~phi1 ~PHI1 ->h h 
+    2% ~phi1 ~PHI1 ->Z Z 
+    1% ~phi1 ~PHI1 ->t T 
+
+==== Indirect detection =======
+    Channel          vcs[cm^3/s]
+==================================
+ annihilation cross section 3.58E-25 cm^3/s
+ contribution of processes
+  ~phi1,~phi1 -> h ~PH  4.80E-01
+  ~PHI1,~PHI1 -> h ~ph  4.80E-01
+  ~phi1,~PHI1 -> W+ W-  1.77E-02
+  ~phi1,~PHI1 -> h h    9.23E-03
+  ~phi1,~PHI1 -> Z Z    8.57E-03
+  ~phi1,~PHI1 -> t T    5.35E-03
+  Can not decay '~PHI1';  Can not decay '~phi1'; 
+Photon flux  for angle of sight f=0.10[rad]
+and spherical region described by cone with angle 0.10[rad]
+Photon flux = 2.74E-15[cm^2 s GeV]^{-1} for E=150.0[GeV]
+Positron flux  =  3.68E-13[cm^2 sr s GeV]^{-1} for E=150.0[GeV] 
+Antiproton flux  =  7.64E-13[cm^2 sr s GeV]^{-1} for E=150.0[GeV] 
+
+==== Calculation of CDM-nucleons amplitudes  =====
+~phi1[~PHI1]-nucleon micrOMEGAs amplitudes
+proton:  SI  1.497E-09 [1.497E-09]  SD  0.000E+00 [0.000E+00]
+neutron: SI  1.512E-09 [1.512E-09]  SD  0.000E+00 [0.000E+00]
+~phi1[~PHI1]-nucleon cross sections[pb]:
+ proton  SI 9.734E-10 [9.734E-10] SD 0.000E+00 [0.000E+00]
+ neutron SI 9.928E-10 [9.928E-10] SD 0.000E+00 [0.000E+00]
+
+===== Direct detection exclusion:======
+Excluded by XENON1T_2018  100.0%
+
+h :   total width=4.017894E-03 
+ and Branchings:
+5.896741E-01 h -> b,B
+2.147372E-01 h -> W+,W-
+1.033734E-01 h -> c,C
+6.434734E-02 h -> l,L
+2.517951E-02 h -> Z,Z
+2.448257E-03 h -> s,S
+2.279453E-04 h -> m,M
+6.120736E-06 h -> u,U
+6.120736E-06 h -> d,D
+
+W+ :   total width=2.010064E+00 
+ and Branchings:
+3.334060E-01 W+ -> u,D
+3.332706E-01 W+ -> c,S
+1.111353E-01 W+ -> ne,E
+1.111350E-01 W+ -> nm,M
+1.110530E-01 W+ -> nl,L

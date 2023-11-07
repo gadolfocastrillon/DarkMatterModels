@@ -1,0 +1,203 @@
+%
+% Z4model with a singlet fermion and a singlet scalar as dark matter particles
+%
+model Z4FSsingletDM.
+option ReduceGamma5=0.
+let g5=gamma5.
+use sm_tex.
+option chepPDWidth=50.
+option chepCFWidth=30.
+option chepLPWidth=80.
+prtcformat fullname: '   Full Name  ',
+           name:'   P   ', aname:'  aP   ', pdg:' number ',
+           spin2,mass,width, color, aux, texname: '   LaTeX(A)   ',
+           atexname:'   LateX(A+)   '.
+
+parameter  EE  = 0.31333 : 'Electromagnetic coupling constant (<->1/128)',
+	   GG  = 1.117   : 'Strong coupling constant (Z point)  (PDG-94)',
+	   SW  = 0.4740  : 'sin of the Weinberg angle (PDG-94,"on-shell")',
+           s12 = 0.221   : 'Parameter of C-K-M matrix (PDG-94)',
+	   s23 = 0.040   : 'Parameter of C-K-M matrix (PDG-94)',
+           s13 = 0.0035  : 'Parameter of C-K-M matrix (PDG-94)'.
+
+parameter  CW  = sqrt(1-SW**2) : 'cos of the Weinberg angle'.
+
+parameter  c12  = sqrt(1-s12**2) : 	'parameter  of C-K-M matrix',
+           c23  = sqrt(1-s23**2) : 	'parameter  of C-K-M matrix',
+           c13  = sqrt(1-s13**2) : 	'parameter  of C-K-M matrix'.
+
+parameter  Vud = c12*c13 		: 'C-K-M matrix element',
+	   Vus = s12*c13 		: 'C-K-M matrix element',
+	   Vub = s13     		: 'C-K-M matrix element',
+           Vcd = (-s12*c23-c12*s23*s13) : 'C-K-M matrix element',
+           Vcs = (c12*c23-s12*s23*s13)  : 'C-K-M matrix element',
+	   Vcb = s23*c13 		: 'C-K-M matrix element',
+	   Vtd = (s12*s23-c12*c23*s13) 	: 'C-K-M matrix element',
+	   Vts = (-c12*s23-s12*c23*s13)	: 'C-K-M matrix element',
+	   Vtb = c23*c13  		: 'C-K-M matrix element'.
+
+OrthMatrix( { {Vud,Vus,Vub}, {Vcd,Vcs,Vcb}, {Vtd,Vts,Vtb}} ).
+
+
+vector  
+	A/A: (photon, gauge),
+	Z/Z:('Z boson', mass MZ = 91.187, width wZ = 2.502),
+	G/G: (gluon, color c8, gauge),
+	'W+'/'W-': ('W boson', mass MW = MZ*CW, width wW = 2.094).
+
+
+spinor 		n1:(neutrino, pdg 12, left), 	   e1:(electron, pdg 11),
+		n2:('mu-neutrino', pdg 14, left),   e2:(muon, pdg 13, mass Mm  = 0.1057),
+		n3:('tau-neutrino', pdg 16, left),  e3:('tau-lepton', pdg 15,mass Mt  = 1.777).
+
+spinor		u:('u-quark',color c3, mass Mup=0.05),
+		d:('d-quark',color c3, mass Md=0.01),
+		c:('c-quark',color c3, mass Mc  = 1.300),
+		s:('s-quark',color c3, mass Ms = 0.200),
+		t:('t-quark',color c3, mass Mtop = 170, width wtop = 1.442),
+		b:('b-quark',color c3, mass Mb =  4.300 ).
+
+scalar h/h:(Higgs, mass MH = 126),      
+       '~~s2'/'~~s2':('s2', pdg 1002, mass Ms2 =900).
+       
+spinor  '~p1'/'~P1':('psi1', pdg 1001, mass Mp1=400).     
+       
+       
+	
+parameter  laS = 0.1 : 'higgs portal coupling',
+           ys = 0.5 : 'DMs scalar Yukawa coupling', 
+           yp = 0.5 : 'DMs pseudoscalar Yukawa coupling',  
+           vEW = 246 : 'higgs vev'.
+ 
+          
+	 
+let l1={n1,e1}, L1={N1,E1}.
+let l2={n2,e2}, L2={N2,E2}.
+let l3={n3,e3}, L3={N3,E3}.
+
+let q1={u,d}, Q1={U,D}, q1a={u,Vud*d+Vus*s+Vub*b}, Q1a={U,Vud*D+Vus*S+Vub*B}.
+let q2={c,s}, Q2={C,S}, q2a={c,Vcd*d+Vcs*s+Vcb*b}, Q2a={C,Vcd*D+Vcs*S+Vcb*B}. 
+let q3={t,b}, Q3={T,B}, q3a={t,Vtd*d+Vts*s+Vtb*b}, Q3a={T,Vtd*D+Vts*S+Vtb*B}.
+
+let B1= -SW*Z+CW*A, W3=CW*Z+SW*A, W1=('W+'+'W-')/Sqrt2,
+	 W2 = i*('W+'-'W-')/Sqrt2.
+
+let WW1 = {W1,  W2 , W3}, WW = {'W+',W3,'W-'}.
+
+let g=EE/SW, g1=EE/CW.
+
+
+% Self-interaction of gauge bosons
+
+lterm -F**2/4   where 
+	F=deriv^mu*B1^nu-deriv^nu*B1^mu.
+
+
+lterm -F**2/4  where
+	F=deriv^mu*G^nu^a-deriv^nu*G^mu^a+i*GG*f_SU3^a^b^c*G^mu^b*G^nu^c.
+
+lterm -F**2/4  where
+F=deriv^mu*WW1^nu^a-deriv^nu*WW1^mu^a -g*eps^a^b^c*WW1^mu^b*WW1^nu^c.
+
+
+
+
+% left fermion interaction with gauge fields
+
+lterm  	anti(psi)*gamma*(1-g5)/2*(i*deriv-g*taupm*WW/2-Y*g1*B1)*psi
+		where 
+			psi=l1,  Y=-1/2;
+			psi=l2,  Y=-1/2;
+			psi=l3,  Y=-1/2;
+			psi=q1a, Y= 1/6;
+			psi=q2a, Y= 1/6;
+			psi=q3a, Y= 1/6.
+
+% right fermion interaction with gauge fields
+
+lterm  	anti(psi)*gamma*(1+g5)/2*(i*deriv - Y*g1*B1)*psi
+		where 
+			psi=e1, Y= -1;
+			psi=e2, Y= -1;
+			psi=e3, Y= -1;
+			psi=u, Y=  2/3;
+			psi=c, Y=  2/3;
+			psi=t, Y=  2/3;
+			psi=d, Y= -1/3;
+			psi=s, Y= -1/3;
+			psi=b, Y= -1/3.
+
+% quark-gluon interaction
+
+lterm  GG*anti(psi)*lambda*gamma*G*psi where
+	psi=q1; psi=q2; psi=q3.
+
+
+let pp = { 0,  (vev(2*MW/EE*SW)+h)/Sqrt2 }, 
+    PP = { 0,  (vev(2*MW/EE*SW)+h)/Sqrt2 }.
+
+
+
+lterm  -M/MW/Sqrt2*g*(anti(pl)*(1+g5)/2*pr*pp + anti(pr)*(1-g5)/2*pl*PP )
+    where
+	M=Vud*Md,  pl=q1a, pr=d;          
+	M=Vus*Ms, pl=q1a, pr=s;
+	M=Vub*Mb, pl=q1a, pr=b;
+	M=Vcd*Md,  pl=q2a, pr=d;
+	M=Vcs*Ms, pl=q2a, pr=s;
+	M=Vcb*Mb, pl=q2a, pr=b;
+	M=Vtd*Md,  pl=q3a, pr=d;
+	M=Vts*Ms, pl=q3a, pr=s;
+	M=Vtb*Mb, pl=q3a, pr=b.
+
+
+lterm  -M/MW/Sqrt2*g*(anti(pl)*(1+g5)/2*i*tau2*pr*PP 
+		+ anti(pr)*(1-g5)/2*i*pl*tau2*pp ) 
+ where
+	M=Mup ,  pl=q1a, pr=u;
+	M=Mc,  pl=q2a, pr=c;
+	M=Mtop,pl=q3a, pr=t.
+
+lterm  -M/MW/Sqrt2*g*(anti(pl)*(1+g5)/2*pr*pp + anti(pr)*(1-g5)/2*pl*PP )
+    where
+	M=Mm,  pl=l2,  pr=e2;
+	M=Mt,  pl=l3,  pr=e3.
+	
+%New lines
+lterm  laS/2*pp*PP*(~~s2)*(~~s2). 
+lterm  ys/2*cc(~p1)*(~p1)*(~~s2) + AddHermConj. 
+lterm  yp/2*cc(~p1)*g5*(~p1)*(~~s2) + AddHermConj. 
+ 
+lterm -2*lambda*(pp*PP-v**2/2)**2  where 
+	lambda=(g*MH/MW)**2/16, v=2*MW*SW/EE.
+
+
+let Dpp^mu^a = (deriv^mu+i*g1/2*B1^mu)*pp^a +
+	 i*g/2*taupm^a^b^c*WW^mu^c*pp^b.
+
+let DPP^mu^a = (deriv^mu-i*g1/2*B1^mu)*PP^a 
+	-i*g/2*taupm^a^b^c*{'W-'^mu,W3^mu,'W+'^mu}^c*PP^b.	
+
+lterm DPP*Dpp.
+
+%up to here
+
+lterm -i*GG*f_SU3*ccghost(G)*G^mu*deriv^mu*ghost(G).
+lterm  -1/2*(deriv*G)**2.
+%/*
+%SetAngle(1-SW**2=CW**2).
+%SetAngle(3-2*SW**2=aa000).
+%SetAngle(1-3*stB**2=aa001).
+%SetAngle(-2+3*stB**2=aa002).
+%SetAngle(1-6*ctB**2*stB**2=aa003).
+%SetAngle(1-2*SW**2=aa004).
+%SetAngle(3-4*SW**2=aa005).
+%*/
+
+SetEM(A,EE).
+CheckHerm.
+
+
+
+
+
